@@ -564,7 +564,7 @@ export default function App() {
             <div className="arion-right">
               <div className="arion-grid">
                 {[
-                  ['arion-intro-4.JPG','4'],['arion-intro-1.jpg','1'],['arion-intro-3.jpg','3'],
+                  ['arion-intro-4.jpg','4'],['arion-intro-1.jpg','1'],['arion-intro-3.jpg','3'],
                   ['arion-intro-6.jpg','6'],['arion-intro-5.jpg','5'],['arion-intro-7.jpg','7'],
                   ['arion-intro-2.jpg','2'],['arion-intro-8.jpg','8'],['arion-intro-9.jpg','9'],
                 ].map(([file, num], i) => (
