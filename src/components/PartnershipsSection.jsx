@@ -39,14 +39,14 @@ export default function PartnershipsSection() {
     if (partnershipsSection) partnershipsObserver.observe(partnershipsSection)
   }, [])
 
-  // Duplicate partners for infinite scroll effect
   const allPartners = [...PARTNERS, ...PARTNERS]
 
   return (
-    <section className="partnerships-section" id="partnerships">
-      <div className="partnerships-container">
-        <h3 className="partnerships-heading">Selected Brand Partnerships</h3>
-        <div className="partnerships-strip-wrapper">
+    <section id="partnerships" className="relative bg-light-bg py-24 flex items-center min-h-[50vh]">
+      <div className="max-w-[1400px] mx-auto w-full px-6 md:px-12 flex flex-col gap-12">
+        <h3 className="text-center leading-snug">Selected Brand Partnerships</h3>
+
+        <div className="w-full overflow-hidden relative py-8">
           <div className="partnerships-strip">
             {allPartners.map(([img, alt, href], i) => (
               <a key={i} href={href} target="_blank" rel="noopener" className="partnership-logo">
@@ -55,9 +55,10 @@ export default function PartnershipsSection() {
             ))}
           </div>
         </div>
-        <div className="partnerships-footer">
-          <h2 className="partnerships-metric" data-target="25">+25 Projects</h2>
-          <p className="partnerships-caption">Concept · Strategy · Production · Publishing</p>
+
+        <div className="flex flex-col items-center gap-4">
+          <h2 className="partnerships-metric leading-none" data-target="25">+25 Projects</h2>
+          <p className="font-medium opacity-85 text-center">Concept · Strategy · Production · Publishing</p>
         </div>
       </div>
     </section>

@@ -128,7 +128,7 @@ export default function App() {
   return (
     <>
       <Header />
-      <main>
+      <main className="flex flex-col gap-12">
         <HeroSection />
         <ApproachSection />
         <ArionSection />

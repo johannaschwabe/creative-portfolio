@@ -19,23 +19,26 @@ export default function PersonalSection() {
   }, [])
 
   return (
-    <section className="personal-section" id="personal">
-      <div className="personal-container">
-        <div className="personal-text-column">
-          <div className="personal-header">
-            <h2>Personal Brand:<br />Built From Scratch</h2>
-            <h3>At a Glance</h3>
+    <section id="personal" className="relative bg-light-bg py-24">
+      <div className="max-w-[1400px] mx-auto w-full px-6 md:px-12 grid grid-cols-1 md:grid-cols-[1.3fr_1fr] gap-12 md:gap-16 items-start">
+        {/* Text column */}
+        <div className="flex flex-col gap-10 md:pl-12">
+          <div>
+            <h2 className="leading-[0.96] mb-8">Personal Brand:<br />Built From Scratch</h2>
+            <h3 className="mb-6 leading-snug">At a Glance</h3>
           </div>
-          <div className="personal-text">
-            <ul>
-              <li>Built over the past 1.5 years in South Korea</li>
-              <li>Niche: Educational, experience-led content about living in South Korea — helping others navigate daily life, work and cultural differences</li>
-              <li>Grown organically, with multiple videos reaching 500K+ views</li>
-              <li>Growth driven by strong hooks, story-led formats and consistent publishing informed by performance analysis</li>
+          <div className="leading-[1.7]">
+            <ul className="list-disc list-inside leading-[1.8] pl-0">
+              <li className="mb-2">Built over the past 1.5 years in South Korea</li>
+              <li className="mb-2">Niche: Educational, experience-led content about living in South Korea — helping others navigate daily life, work and cultural differences</li>
+              <li className="mb-2">Grown organically, with multiple videos reaching 500K+ views</li>
+              <li className="mb-2">Growth driven by strong hooks, story-led formats and consistent publishing informed by performance analysis</li>
             </ul>
           </div>
         </div>
-        <div className="personal-media-column">
+
+        {/* Media column */}
+        <div className="flex items-stretch justify-center gap-8 md:pr-12">
           <div className="personal-images-stack">
             {[['personal-1.jpg','0'],['personal-3.jpg','1'],['personal-2.jpg','2']].map(([img, n]) => (
               <div key={n} className="personal-image-wrapper" data-personal-animate={n}>

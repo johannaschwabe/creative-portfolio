@@ -13,32 +13,36 @@ export default function ConceptualSection() {
   }, [])
 
   return (
-    <section className="conceptual-section" id="conceptual">
-      <div className="conceptual-container">
-        <div className="conceptual-left">
-          <h2>Conceptual Campaign</h2>
-          <h3>In Between</h3>
-          <div className="conceptual-content">
-            <h4>Insight</h4>
-            <p>We spend more time in between than arriving.</p>
-            <h4>Creative Idea</h4>
-            <p>A minimalist fashion campaign focused on moments of pause, movement and presence — not defined by arrival, but by what happens in between.</p>
-            <h4>Creative Rule</h4>
-            <p>Each visual presents a look that feels intentionally unfinished — styled to suggest transition rather than completion.</p>
-            <h4>Campaign System</h4>
-            <ul>
-              <li>Unfinished styling (open coats, undone buttons, loose layers)</li>
-              <li>Cropped or incomplete framing (faces partially out of frame, bodies cut mid-movement)</li>
+    <section id="conceptual" className="relative bg-light-bg py-24">
+      <div className="max-w-[1400px] mx-auto w-full px-6 md:px-12">
+        <h2 className="leading-[0.96] mb-8 whitespace-normal md:whitespace-nowrap">Conceptual Campaign</h2>
+        <div className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr] gap-12 md:gap-20 items-start">
+        {/* Left: text */}
+        <div className="max-w-[650px]">
+          <h3 className="mb-8 leading-snug">In Between</h3>
+          <div>
+            <h4 className="mb-3">Insight</h4>
+            <p className="leading-[1.7] mb-1">We spend more time in between than arriving.</p>
+            <h4 className="mb-3 mt-8">Creative Idea</h4>
+            <p className="leading-[1.7] mb-1">A minimalist fashion campaign focused on moments of pause, movement and presence — not defined by arrival, but by what happens in between.</p>
+            <h4 className="mb-3 mt-8">Creative Rule</h4>
+            <p className="leading-[1.7] mb-1">Each visual presents a look that feels intentionally unfinished — styled to suggest transition rather than completion.</p>
+            <h4 className="mb-3 mt-8">Campaign System</h4>
+            <ul className="list-disc list-inside leading-[1.6] pl-0 mb-1">
+              <li className="mb-1">Unfinished styling (open coats, undone buttons, loose layers)</li>
+              <li className="mb-1">Cropped or incomplete framing (faces partially out of frame, bodies cut mid-movement)</li>
             </ul>
-            <h4>Why this works as a campaign</h4>
-            <ul>
-              <li>Focuses on an ongoing, universal state</li>
-              <li>Unfinished visuals allow identification without narrative direction</li>
-              <li>A simple visual rule creates recognition and consistency</li>
+            <h4 className="mb-3 mt-8">Why this works as a campaign</h4>
+            <ul className="list-disc list-inside leading-[1.6] pl-0 mb-1">
+              <li className="mb-1">Focuses on an ongoing, universal state</li>
+              <li className="mb-1">Unfinished visuals allow identification without narrative direction</li>
+              <li className="mb-1">A simple visual rule creates recognition and consistency</li>
             </ul>
           </div>
         </div>
-        <div className="conceptual-right">
+
+        {/* Right: images */}
+        <div className="flex flex-col gap-3">
           <div className="conceptual-main-image">
             <img src="/assets/images/conceptual-1.jpg" alt="Conceptual campaign" loading="lazy" />
           </div>
@@ -49,6 +53,7 @@ export default function ConceptualSection() {
               </div>
             ))}
           </div>
+        </div>
         </div>
       </div>
     </section>
