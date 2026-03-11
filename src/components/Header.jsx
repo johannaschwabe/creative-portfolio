@@ -1,45 +1,47 @@
-import { useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
 export default function Header() {
+  const [scrolled, setScrolled] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
+
   useEffect(() => {
-    // Header scroll state
-    const header = document.getElementById('mainHeader')
     const heroSection = document.getElementById('home')
-    function updateHeaderColor() {
+
+    function updateScrollState() {
+      if (!heroSection) return
       const heroBottom = heroSection.offsetTop + heroSection.offsetHeight
-      if (window.scrollY + 100 > heroBottom) header.classList.add('scrolled')
-      else header.classList.remove('scrolled')
-    }
-    window.addEventListener('scroll', updateHeaderColor)
-    updateHeaderColor()
-
-    // Hamburger menu
-    const hamburgerBtn = document.getElementById('hamburgerBtn')
-    const navLinks = document.getElementById('navLinks')
-    if (hamburgerBtn && navLinks) {
-      hamburgerBtn.addEventListener('click', () => navLinks.classList.toggle('open'))
-      navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => navLinks.classList.remove('open')))
+      setScrolled(window.scrollY + 80 > heroBottom)
     }
 
-    return () => {
-      window.removeEventListener('scroll', updateHeaderColor)
-    }
+    window.addEventListener('scroll', updateScrollState, { passive: true })
+    updateScrollState()
+
+    return () => window.removeEventListener('scroll', updateScrollState)
   }, [])
 
+  const closeMenu = () => setMenuOpen(false)
+
   return (
-    <header id="mainHeader">
+    <header id="mainHeader" className={scrolled ? 'scrolled' : ''}>
       <nav>
-        <button className="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+        <a href="#home" className="nav-brand" onClick={closeMenu}>
+          Johanna Schwabe
+        </a>
+        <button
+          className={`hamburger${menuOpen ? ' open' : ''}`}
+          aria-label="Toggle menu"
+          onClick={() => setMenuOpen(prev => !prev)}
+        >
           <span></span>
           <span></span>
           <span></span>
         </button>
-        <ul className="nav-links" id="navLinks">
-          <li><a href="#home">Home</a></li>
-          <li><a href="mailto:johanna.schwabe@kabsi.at">Contact</a></li>
-          <li><a href="https://www.instagram.com/globaldiariess" target="_blank" rel="noopener noreferrer">Socials</a></li>
-          <li><a href="/assets/documents/cv-johanna-schwabe.pdf" target="_blank" rel="noopener noreferrer">CV</a></li>
-          <li><a href="#arion">View Work</a></li>
+        <ul className={`nav-links${menuOpen ? ' open' : ''}`}>
+          <li><a href="#home" onClick={closeMenu}>Home</a></li>
+          <li><a href="mailto:johanna.schwabe@kabsi.at" onClick={closeMenu}>Contact</a></li>
+          <li><a href="https://www.instagram.com/globaldiariess" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>Socials</a></li>
+          <li><a href="/assets/documents/cv-johanna-schwabe.pdf" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>CV</a></li>
+          <li><a href="#arion" className="nav-cta" onClick={closeMenu}>View Work</a></li>
         </ul>
       </nav>
     </header>
