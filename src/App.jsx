@@ -1,6 +1,7 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function App() {
+  const [privacyOpen, setPrivacyOpen] = useState(false)
   useEffect(() => {
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -1023,6 +1024,35 @@ export default function App() {
           </div>
         </section>
       </main>
+
+      {/* Footer */}
+      <footer className="site-footer">
+        <div className="footer-inner">
+          <div className="footer-top">
+            <button className="footer-privacy-btn" onClick={() => setPrivacyOpen(true)}>Privacy Policy</button>
+            <span className="footer-divider">·</span>
+            <a className="footer-contact" href="mailto:johanna.schwabe@kabsi.at">johanna.schwabe@kabsi.at</a>
+          </div>
+          <p className="footer-disclaimer">This portfolio is intended for job application purposes only. Selected images are used for reference or illustrative purposes and are not my original work.</p>
+        </div>
+      </footer>
+
+      {/* Privacy Policy Modal */}
+      {privacyOpen && (
+        <div className="privacy-modal-overlay" onClick={() => setPrivacyOpen(false)}>
+          <div className="privacy-modal" onClick={e => e.stopPropagation()}>
+            <button className="privacy-modal-close" onClick={() => setPrivacyOpen(false)}>×</button>
+            <h3>Privacy Policy</h3>
+            <p>This website is a personal portfolio created for job application purposes.</p>
+            <h4>Server Log Files</h4>
+            <p>The website hosting provider may automatically collect and store information in server log files that your browser transmits automatically. This may include information such as browser type, operating system, referring URL, IP address, and time of the request. This data is used to ensure the proper functioning and security of the website and is not combined with other data sources.</p>
+            <h4>Embedded YouTube Videos</h4>
+            <p>This website includes embedded videos from YouTube. YouTube is operated by Google Ireland Limited. When you visit a page containing an embedded YouTube video, your browser may establish a connection to YouTube's servers. As a result, YouTube may receive information about your visit to this website. If you are logged into your YouTube account, YouTube may associate your browsing behavior with your personal profile. For more information, please refer to YouTube's privacy policy.</p>
+            <h4>Contact</h4>
+            <p>If you contact me via email, your message and contact details will only be used for the purpose of responding to your inquiry.</p>
+          </div>
+        </div>
+      )}
 
       {/* Lightbox */}
       <div className="case-lightbox" id="caseLightbox">
