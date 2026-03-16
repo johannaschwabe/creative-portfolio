@@ -3,6 +3,10 @@ import { useEffect, useState } from 'react'
 export default function App() {
   const [privacyOpen, setPrivacyOpen] = useState(false)
   useEffect(() => {
+    document.body.style.overflow = privacyOpen ? 'hidden' : ''
+    return () => { document.body.style.overflow = '' }
+  }, [privacyOpen])
+  useEffect(() => {
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
