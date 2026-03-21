@@ -549,7 +549,7 @@ main { padding-top: 0; }
 .wh-campaign-video-wrapper.active { opacity: 1; pointer-events: auto; display: flex; }
 .wh-campaign-video-wrapper video { width: 100%; height: 100%; object-fit: cover; border-radius: 12px; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); pointer-events: none; display: block; }
 .on-camera-section { position: relative; background-color: var(--color-light-bg); padding: 6rem 6rem; min-height: 100vh; display: flex; align-items: center; }
-.on-camera-container { max-width: 100%; margin: 0 auto; width: 100%; display: grid; grid-template-columns: 1.5fr 1fr 1.5fr; gap: 3rem; align-items: center; }
+.on-camera-container { max-width: 1400px; margin: 0 auto; width: 100%; display: grid; grid-template-columns: 1.5fr 1fr 1.5fr; gap: 3rem; align-items: center; }
 .on-camera-left { display: flex; align-items: center; justify-content: flex-end; }
 .on-camera-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.65rem; max-width: 100%; }
 .on-camera-image { overflow: hidden; }
@@ -800,6 +800,69 @@ section:not(.hero) { padding-top: 0; }
 @media (prefers-reduced-motion: reduce) {
     .partnerships-strip { animation: none; }
     .beyond-timeline-left .beyond-timeline-track, .beyond-timeline-right .beyond-timeline-track { animation: none; }
+}
+
+/* Large screens — scale up text and elements */
+@media (min-width: 1800px) {
+    :root { --h1-size: 160px; --h2-size: 80px; --h3-size: 36px; --h4-size: 24px; --body-size: 20px; }
+    .approach-container { max-width: 1500px; }
+    .approach-visuals { width: 480px; }
+    .approach-image-wrapper:first-child { width: 420px; height: 450px; }
+    .approach-image-wrapper:last-child { width: 380px; height: 400px; }
+    .arion-container { max-width: 1600px; }
+    .arion-grid { max-width: 700px; }
+    .arion-logo { height: 90px; }
+    .case-study-container { max-width: 1500px; }
+    .case-study-video-wrapper { max-width: 420px; }
+    .high-impact-container { max-width: 1500px; }
+    .high-impact-video-area { max-width: 420px; }
+    .beyond-container { max-width: 1500px; }
+    .beyond-video-wrapper, .beyond-bts-item { width: 240px; height: 360px; }
+    .personal-container { max-width: 1500px; }
+    .personal-phone-mockup { width: 320px; height: 640px; }
+    .personal-image-wrapper { width: 180px; height: 200px; }
+    .partnerships-container { max-width: 1500px; }
+    .partnership-logo { height: 90px; }
+    .partnership-logo img { max-width: 250px; }
+    .food-campaign-container { max-width: 1500px; }
+    .food-campaign-video-area { max-width: 420px; }
+    .wh-campaign-container { max-width: 1500px; }
+    .on-camera-container { max-width: 1500px; }
+    .on-camera-section { padding: 6rem 4rem; }
+    .on-camera-center { max-width: 420px; }
+    .conceptual-container { max-width: 1500px; }
+    .footer-inner { max-width: 1500px; }
+}
+
+@media (min-width: 2200px) {
+    :root { --h1-size: 180px; --h2-size: 90px; --h3-size: 40px; --h4-size: 26px; --body-size: 22px; }
+    .approach-container { max-width: 1700px; }
+    .approach-visuals { width: 540px; }
+    .approach-image-wrapper:first-child { width: 480px; height: 510px; }
+    .approach-image-wrapper:last-child { width: 420px; height: 440px; }
+    .arion-container { max-width: 1800px; }
+    .arion-grid { max-width: 800px; }
+    .arion-logo { height: 100px; }
+    .case-study-container { max-width: 1700px; }
+    .case-study-video-wrapper { max-width: 480px; }
+    .high-impact-container { max-width: 1700px; }
+    .high-impact-video-area { max-width: 480px; }
+    .beyond-container { max-width: 1700px; }
+    .beyond-video-wrapper, .beyond-bts-item { width: 280px; height: 420px; }
+    .personal-container { max-width: 1700px; }
+    .personal-phone-mockup { width: 360px; height: 720px; }
+    .personal-image-wrapper { width: 200px; height: 220px; }
+    .partnerships-container { max-width: 1700px; }
+    .partnership-logo { height: 100px; }
+    .partnership-logo img { max-width: 280px; }
+    .food-campaign-container { max-width: 1700px; }
+    .food-campaign-video-area { max-width: 480px; }
+    .wh-campaign-container { max-width: 1700px; }
+    .on-camera-container { max-width: 1700px; }
+    .on-camera-section { padding: 6rem 5rem; }
+    .on-camera-center { max-width: 480px; }
+    .conceptual-container { max-width: 1700px; }
+    .footer-inner { max-width: 1700px; }
 }
 
 /* Footer */
