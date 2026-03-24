@@ -37,7 +37,7 @@ export default function FoodCampaignSection() {
     <section id="food-campaign" className="relative bg-light-bg py-24">
       <div className="max-w-[1400px] mx-auto w-full px-6 md:px-12 grid grid-cols-1 md:grid-cols-[1fr_1.2fr] gap-12 md:gap-20 items-start">
         {/* Left: video + stats */}
-        <div className="flex items-center justify-center gap-12 md:h-[80vh]">
+        <div className="flex items-start justify-center gap-12">
           <div className="food-campaign-stats-container">
             <div className="food-campaign-stats">
               <div className="food-campaign-stat"><h2 className="stat-number" data-target="252">252K+</h2><p className="stat-label">views on Instagram</p></div>
