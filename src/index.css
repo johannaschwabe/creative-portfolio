@@ -1,6 +1,12 @@
 @import url('https://fonts.cdnfonts.com/css/aileron');
 @import "tailwindcss";
 
+/* Force font-display: swap for Aileron (cdnfonts doesn't expose this param) */
+@font-face {
+  font-family: 'Aileron';
+  font-display: swap;
+}
+
 /* ─── Design Tokens ──────────────────────────────── */
 @theme {
   --color-dark-text: #1a1a1a;
@@ -499,7 +505,10 @@ main { padding-top: 0; }
 @media (max-width: 768px) {
   .food-campaign-video-area { max-width: 260px; width: 100%; aspect-ratio: 9 / 16; }
   .food-campaign-stats { flex-direction: row; gap: 3rem; justify-content: center; }
-  .food-campaign-stats-container { display: block; }
+  .food-campaign-stats-container { display: flex; height: auto; align-items: center; }
+  .food-campaign-left { order: 2; }
+  .food-campaign-right { order: 1; }
+  .food-campaign-left-inner { flex-direction: column-reverse; align-items: center; gap: 1.5rem; }
 }
 
 /* ═══════════════════════════════════════════════════

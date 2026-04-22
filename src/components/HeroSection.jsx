@@ -47,7 +47,7 @@ export default function HeroSection() {
 
   return (
     <section id="home" className="hero">
-      <video className="hero-video" autoPlay muted loop playsInline id="heroVideo">
+      <video className="hero-video" autoPlay muted loop playsInline id="heroVideo" poster="/assets/images/johanna-schwabe-portfolio.jpg">
         <source src="/assets/videos/hero-loop.mp4" type="video/mp4" />
       </video>
       <div className="hero-overlay"></div>

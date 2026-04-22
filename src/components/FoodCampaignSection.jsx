@@ -37,7 +37,7 @@ export default function FoodCampaignSection() {
     <section id="food-campaign" className="relative bg-light-bg py-24">
       <div className="max-w-[1400px] mx-auto w-full px-6 md:px-12 grid grid-cols-1 md:grid-cols-[1fr_1.2fr] gap-12 md:gap-20 items-start">
         {/* Left: video + stats */}
-        <div className="flex items-start justify-center gap-12">
+        <div className="food-campaign-left food-campaign-left-inner flex items-start justify-center gap-12">
           <div className="food-campaign-stats-container">
             <div className="food-campaign-stats">
               <div className="food-campaign-stat"><h2 className="stat-number" data-target="252">252K+</h2><p className="stat-label">views on Instagram</p></div>
@@ -54,7 +54,7 @@ export default function FoodCampaignSection() {
         </div>
 
         {/* Right: text */}
-        <div className="flex flex-col max-w-[600px]">
+        <div className="food-campaign-right flex flex-col max-w-[600px]">
           <h3 className="mb-8 leading-[0.96]">High-Impact Campaign</h3>
           <h4 className="mb-3">Concept</h4>
           <p className="leading-[1.7] mb-2">A value-driven restaurant video designed for international audiences, positioning a new restaurant location as an approachable, must-save destination through a first-person unlimited BBQ experience.</p>
