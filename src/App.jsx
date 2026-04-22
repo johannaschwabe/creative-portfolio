@@ -1,19 +1,18 @@
-import { useEffect, useState, lazy, Suspense } from 'react'
+import { useEffect, useState } from 'react'
 import Header from './components/Header'
 import HeroSection from './components/HeroSection'
+import ApproachSection from './components/ApproachSection'
+import ArionSection from './components/ArionSection'
+import CaseStudySection from './components/CaseStudySection'
+import HighImpactSection from './components/HighImpactSection'
+import BeyondSection from './components/BeyondSection'
+import PersonalSection from './components/PersonalSection'
+import PartnershipsSection from './components/PartnershipsSection'
+import FoodCampaignSection from './components/FoodCampaignSection'
+import WHCampaignSection from './components/WHCampaignSection'
+import OnCameraSection from './components/OnCameraSection'
+import ConceptualSection from './components/ConceptualSection'
 import Lightbox from './components/Lightbox'
-
-const ApproachSection = lazy(() => import('./components/ApproachSection'))
-const ArionSection = lazy(() => import('./components/ArionSection'))
-const CaseStudySection = lazy(() => import('./components/CaseStudySection'))
-const HighImpactSection = lazy(() => import('./components/HighImpactSection'))
-const BeyondSection = lazy(() => import('./components/BeyondSection'))
-const PersonalSection = lazy(() => import('./components/PersonalSection'))
-const PartnershipsSection = lazy(() => import('./components/PartnershipsSection'))
-const FoodCampaignSection = lazy(() => import('./components/FoodCampaignSection'))
-const WHCampaignSection = lazy(() => import('./components/WHCampaignSection'))
-const OnCameraSection = lazy(() => import('./components/OnCameraSection'))
-const ConceptualSection = lazy(() => import('./components/ConceptualSection'))
 
 const VIDEO_MAP = {
   '1': 'https://www.youtube.com/embed/Z15yr6iA9AY?rel=0&modestbranding=1&controls=1&autoplay=1',
@@ -136,19 +135,17 @@ export default function App() {
       <Header />
       <main className="flex flex-col gap-12">
         <HeroSection />
-        <Suspense fallback={null}>
-          <ApproachSection />
-          <ArionSection />
-          <CaseStudySection />
-          <HighImpactSection />
-          <BeyondSection />
-          <PersonalSection />
-          <PartnershipsSection />
-          <FoodCampaignSection />
-          <WHCampaignSection />
-          <OnCameraSection />
-          <ConceptualSection />
-        </Suspense>
+        <ApproachSection />
+        <ArionSection />
+        <CaseStudySection />
+        <HighImpactSection />
+        <BeyondSection />
+        <PersonalSection />
+        <PartnershipsSection />
+        <FoodCampaignSection />
+        <WHCampaignSection />
+        <OnCameraSection />
+        <ConceptualSection />
       </main>
       <footer className="site-footer">
         <div className="footer-inner">
