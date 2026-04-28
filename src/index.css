@@ -216,7 +216,7 @@ main { padding-top: 0; }
 @media (max-width: 768px) {
   .approach-visuals { width: 100%; }
   .approach-image-wrapper:first-child { width: 80%; height: auto; }
-  .approach-image-wrapper:last-child { width: 70%; height: auto; margin-top: -3rem; margin-left: auto; }
+  .approach-image-wrapper:nth-child(2) { width: 70%; height: auto; margin-top: -3rem; margin-left: auto; }
   .approach-intro { white-space: normal; }
 }
 
