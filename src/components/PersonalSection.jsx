@@ -38,7 +38,7 @@ export default function PersonalSection() {
         </div>
 
         {/* Media column */}
-        <div className="flex items-stretch justify-center gap-8 md:pr-12">
+        <div className="flex flex-col items-center md:flex-row md:items-stretch justify-center gap-8 md:pr-12">
           <div className="personal-images-stack">
             {[['personal-1.jpg','0'],['personal-3.jpg','1'],['personal-2.jpg','2']].map(([img, n]) => (
               <div key={n} className="personal-image-wrapper" data-personal-animate={n}>
